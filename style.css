@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Montserrat+Subrayada&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+.home{
+    background: url(foodbg.svg);
+    min-height: 70vh;
+    background-position: center;
+    background-size: cover;
+}
+.home .nav{
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #fff; */
+    padding: 0px 10px;
+    z-index: 500;
+}
+.nav .products{
+    display: flex;
+    font-size: 1.2rem;
+}
+.nav .products .trending{
+    background-color: #ffc333;
+    color: #222;
+    margin-right: 20px;
+    padding: 8px;
+    text-decoration: none;
+}
+.nav .products .ourMenu{
+    border: 2px solid #ffc333;
+    color: #222;
+    background-color: #ffc333;
+    padding: 8px;
+    text-decoration: none;
+}
+.nav .products .ourMenu > p{
+    cursor: pointer;
+}
+.nav .products .ourMenu:hover .dropdown-content{
+    display: block;
+}
+.ourMenu .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    left: 0%;
+    /* top: 70px; */
+    z-index: 1000;
+}
+.ourMenu .dropdown-content .header{
+    padding: 10px;
+    font-size: 1.3rem;
+    color: #222;
+    background-color: #ffc333;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    display: flex;
+    align-items: center;
+}
+.ourMenu .dropdown-content .header i{
+    border: 2px solid #222;
+    border-radius: 50%;
+    padding: 8px;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+}
+.ourMenu .dropdown-content .row{
+    display: flex;
+    justify-content: space-between;
+}
+.ourMenu .dropdown-content .column{
+    color: #222;
+    width: 100%;
+}
+.ourMenu .dropdown-content .column p{
+    margin: 5px;
+    padding: 10px;
+    background-color: #ffc333;
+    font-family: 'Montserrat Subrayada', sans-serif;
+}
+.ourMenu .dropdown-content .column a{
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #222;
+    margin: 8px;
+    font-style: italic;
+}
+.ourMenu .dropdown-content .column a:hover{
+    background-color: #eee;
+}
+.nav .logo img{
+    margin-right: 6rem;
+    height: 70px;
+    width: 100px;
+}
+.nav .login{
+    display: flex;
+}
+.nav .login i{
+    margin: 0 10px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    color: #222;
+    background-color: #ffc333;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    line-height: 42px;
+    cursor: pointer;
+}
+@media (max-width:600px) {
+    .nav .products .trending{
+        display: none;
+    }
+    .nav .products .ourMenu{
+        padding: 5px;
+        font-size: 1rem;
+    }
+    .ourMenu .dropdown-content{
+        height: 100vh;
+        overflow-y: scroll;
+    }
+    .ourMenu .dropdown-content .row{
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    .nav .logo img{
+        margin-right: 0;
+        height: 70px;
+        width: 100px;
+    }
+    .nav .login i{
+        margin: 0 5px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 30px;
+    }  
+    .special .cont{
+        flex-direction: column;
+    } 
+}
+
+.home .text{
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.home .text > p{
+    font-family: 'Montserrat Subrayada', sans-serif;
+    margin: 5px;
+    font-size: 2rem;
+    text-align: center;
+}
+.home .text p span{
+    padding: 2px;
+    background-color: #ffc333;
+    color: #222;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    border-radius: 5px;   
+}
+.home .text .cont{
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 5px;
+}
+.home .text .cont a{
+    text-decoration: none;
+    color: #222;
+    background: #ffc333;
+    margin: 5px;
+    padding: 2px;
+}
+.home .text .icons{
+    margin: 5px 0;
+}
+.home .text .icons a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #222;
+    padding: 5px;
+}
+.special{
+    margin: 1.1rem 0;
+}
+.special h1{
+    font-family: 'Montserrat Subrayada', sans-serif;
+    text-align: center;
+    background-color: #ffc333;
+    padding: 5px;
+    margin: 1.2rem 0;
+}
+.special .deg{
+    margin: 2px 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.deg .line{
+    margin: 0 5px;
+    width: 25rem;
+    height: 3px;
+    background-color: #222;
+}
+.special .cont{
+    display: flex;
+    justify-content: center;
+    margin: 5px 10vw;
+}
+.special .cont h2{
+    font-family: 'Montserrat Subrayada', sans-serif;
+}
+.special .cont .welcome{
+    flex: 40%;
+    margin: 5px 0;
+}
+.special .cont .welcome p{
+    margin-bottom: 10px;
+}
+.special .cont .feature{
+    flex: 40%;
+    margin: 5px 0;
+    margin-left: 20px;
+}
+.special .cont .feature p{
+    margin-bottom: 2px;
+}
+.special .cont .feature p i{
+    margin-right: 10px;
+}
+.special .some-icon{
+    text-align: center;
+    margin: 5px;
+}
+.special .some-icon .in{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.special .some-icon .in p{
+    background: #ddd;
+    color: #222;
+    padding: 10px 10px;
+    margin: 5px;
+    font-weight: bold;
+}
+.special .some-icon .in p i{
+    margin-right: 10px;
+}
+.trend{
+    margin: 1.1rem 0;
+}
+.trend h1{
+    font-family: 'Montserrat Subrayada', sans-serif;
+    text-align: center;
+    background-color: #ffc333;
+    padding: 5px;
+    margin: 1.2rem 0;
+}
+.trend .slide{
+    width: 18rem;
+    text-align: center;
+    border: 1px solid #222;
+    background-color: #fff;
+    margin: 0 1rem;
+}
+.trend .slide:hover img{
+    transform: scale(1.1);
+    transition: all .2s linear;
+}
+.trend .slide .image{
+    height: 15rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.trend .slide .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.trend .slide .image .icons{
+    position: absolute;
+    top: 5px;
+    right: -5rem;
+}
+.trend .slide .image .icons a{
+    text-align: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 1.2rem;
+    background: #ffc333;
+    color: #222;
+    text-decoration: none;
+    display: block;
+    margin: 5px;
+    border: 2px solid #222;
+}
+.trend .slide .image .icons a:hover{
+    background-color: #fff;
+}
+.trend .slide:hover .icons{
+    right: .5rem;
+    transition: all .2s linear;
+}
+.trend .slide .content{
+    padding: 1.5rem;
+    border-top: 1px solid #222;
+}
+.trend .slide .content p{
+    font-size: 1.5rem;
+    color: #222;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-weight: bold;
+}
+.trend .slide .content .price{
+    font-size: 1.2rem;
+    color: #ffc333;
+    background-color: #222;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 15px 0;
+    /* font-weight: bold; */
+}
+.trend .slide .content .price span{
+    color: #fff;
+    text-decoration: line-through;
+}
+.trend .slide .content .btn{
+    padding: 6px;
+    border: 2px solid #222;
+    text-decoration: none;
+    color: #222;
+    background-color: #ffc333;
+}
+.trend .slide .content .btn:hover{
+    background: none;
+}
+.testimonial{
+    background-color: #eee;
+    padding-bottom: 1.5rem;
+}
+.testimonial h1{
+    font-family: 'Montserrat Subrayada', sans-serif;
+    text-align: center;
+    background-color: #ffc333;
+    padding: 5px;
+    margin: 1.2rem 0;
+}
+.w{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.test-slide{
+    position: relative;
+    width: 20rem;
+    margin: 1.2rem;
+    margin-top: 4rem;
+    padding-top: 3rem;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.test-slide .image{
+    position: absolute;
+    left: 33%;
+    top: -3.2rem;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.test-slide .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.test-slide .comma{
+    position: absolute;
+    top: 3rem;
+    left: .5rem;
+    font-size: 2rem;
+    color: #ffc333;
+}
+.test-slide p{
+    font-size: 1.1rem;
+    text-align: justify;
+    padding: 0.4rem 2.4rem;
+}
+.test-slide .star{
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #ffc333;
+    color: #222;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+.test-slide .star p{
+    text-align: center;
+}
